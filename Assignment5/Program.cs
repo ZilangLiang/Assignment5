@@ -6,6 +6,10 @@ using System.Windows.Forms;
 
 namespace Assignment5
 {
+    /*
+     * Name: ZiLang Liang
+     * Date: August 3,2017
+     * */
     static class Program
     {
         /// <summary>
@@ -16,7 +20,7 @@ namespace Assignment5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new BMICalculator());
         }
     }
 }

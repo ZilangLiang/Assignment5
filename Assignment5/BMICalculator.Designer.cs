@@ -1,6 +1,6 @@
 ﻿namespace Assignment5
 {
-    partial class Form1
+    partial class BMICalculator
     {
         /// <summary>
         /// Required designer variable.
