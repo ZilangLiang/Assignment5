@@ -33,15 +33,15 @@
             this.MetricButton = new System.Windows.Forms.RadioButton();
             this.HeightLabel = new System.Windows.Forms.Label();
             this.InchesTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.WeightLabel = new System.Windows.Forms.Label();
             this.PoundsTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.InputLabel = new System.Windows.Forms.Label();
             this.ShowBMI = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -86,7 +86,7 @@
             // MetricButton
             // 
             this.MetricButton.AutoSize = true;
-            this.MetricButton.Location = new System.Drawing.Point(151, 3);
+            this.MetricButton.Location = new System.Drawing.Point(158, 3);
             this.MetricButton.Name = "MetricButton";
             this.MetricButton.Size = new System.Drawing.Size(106, 35);
             this.MetricButton.TabIndex = 1;
@@ -99,37 +99,61 @@
             this.HeightLabel.AutoSize = true;
             this.HeightLabel.Location = new System.Drawing.Point(3, 63);
             this.HeightLabel.Name = "HeightLabel";
-            this.HeightLabel.Size = new System.Drawing.Size(137, 31);
+            this.HeightLabel.Size = new System.Drawing.Size(144, 31);
             this.HeightLabel.TabIndex = 2;
-            this.HeightLabel.Text = "MyHeight:";
+            this.HeightLabel.Text = "My Height:";
             // 
             // InchesTextBox
             // 
             this.InchesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InchesTextBox.Location = new System.Drawing.Point(151, 66);
+            this.InchesTextBox.ForeColor = System.Drawing.Color.Silver;
+            this.InchesTextBox.Location = new System.Drawing.Point(158, 66);
             this.InchesTextBox.Multiline = true;
             this.InchesTextBox.Name = "InchesTextBox";
             this.InchesTextBox.Size = new System.Drawing.Size(100, 25);
             this.InchesTextBox.TabIndex = 3;
+            this.InchesTextBox.Tag = "";
             this.InchesTextBox.TextChanged += new System.EventHandler(this.HeightBox_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(158, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "(Inches)";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // WeightLabel
             // 
             this.WeightLabel.AutoSize = true;
             this.WeightLabel.Location = new System.Drawing.Point(3, 142);
             this.WeightLabel.Name = "WeightLabel";
-            this.WeightLabel.Size = new System.Drawing.Size(142, 31);
+            this.WeightLabel.Size = new System.Drawing.Size(149, 31);
             this.WeightLabel.TabIndex = 5;
-            this.WeightLabel.Text = "MyWeight:";
+            this.WeightLabel.Text = "My Weight:";
             // 
             // PoundsTextBox
             // 
             this.PoundsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoundsTextBox.Location = new System.Drawing.Point(151, 145);
+            this.PoundsTextBox.ForeColor = System.Drawing.Color.Silver;
+            this.PoundsTextBox.Location = new System.Drawing.Point(158, 145);
             this.PoundsTextBox.Multiline = true;
             this.PoundsTextBox.Name = "PoundsTextBox";
             this.PoundsTextBox.Size = new System.Drawing.Size(100, 25);
             this.PoundsTextBox.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(158, 184);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "(Pounds)";
             // 
             // tableLayoutPanel2
             // 
@@ -146,13 +170,15 @@
             // CalculateButton
             // 
             this.CalculateButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.CalculateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CalculateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.CalculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CalculateButton.Location = new System.Drawing.Point(54, 3);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(91, 43);
             this.CalculateButton.TabIndex = 0;
             this.CalculateButton.Text = "Calculate BMI";
-            this.CalculateButton.UseVisualStyleBackColor = true;
+            this.CalculateButton.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
@@ -186,36 +212,17 @@
             this.ShowBMI.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ShowBMI.BackColor = System.Drawing.Color.White;
             this.ShowBMI.Enabled = false;
+            this.ShowBMI.ForeColor = System.Drawing.Color.Silver;
             this.ShowBMI.Location = new System.Drawing.Point(50, 53);
             this.ShowBMI.Multiline = true;
             this.ShowBMI.Name = "ShowBMI";
             this.ShowBMI.Size = new System.Drawing.Size(100, 28);
             this.ShowBMI.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(151, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "(Inches)";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(151, 184);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "(Pounds)";
-            // 
-            // Form1
+            // BMICalculator
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(304, 442);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -223,7 +230,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "BMICalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
