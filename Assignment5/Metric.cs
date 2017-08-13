@@ -10,7 +10,7 @@ using System.Windows.Forms;
 /// <summary>
 /// Date: August 13, 2017
 /// Description: this is the UI for Metric Calculator
-/// version 0.2 - Changed Metric Calculator
+/// version 0.3 - Changed Metric calculator Method
 /// </summary>
 namespace Assignment5
 {
@@ -31,18 +31,11 @@ namespace Assignment5
             InitializeComponent();
         }
 
-        private void ImperialButton_CheckedChanged(object sender, EventArgs e)
-        {
-            this.BMICalculator.Show();
-
-            this.Hide();
-        }
-
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             double weight = Convert.ToDouble(CmTextBox.Text);
             double height = Convert.ToDouble(KgTextBox.Text);
-            double BMI = (weight * 703) / (height * height);
+            double BMI = weight / ((height / 100) * (height / 100));
             ResultTextBox.Text = string.Format("{0:f}", BMI);
 
             if (BMI < 18.5)
