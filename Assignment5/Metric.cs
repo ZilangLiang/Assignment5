@@ -10,7 +10,7 @@ using System.Windows.Forms;
 /// <summary>
 /// Date: August 13, 2017
 /// Description: this is the UI for Metric Calculator
-/// version 0.3 - Changed Metric calculator Method
+/// version 0.4 - Added new method to switch to Imperial Claculator, and make the UI look much pretty
 /// </summary>
 namespace Assignment5
 {
@@ -59,6 +59,12 @@ namespace Assignment5
         private void Metric_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ImperialButton_Click(object sender, EventArgs e)
+        {
+            new BMICalculator().Show();
+            this.Hide();
         }
     }
 }

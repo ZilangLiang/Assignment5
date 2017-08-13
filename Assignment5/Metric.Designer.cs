@@ -41,7 +41,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.ImperialButton = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -59,7 +59,7 @@
             this.tableLayoutPanel1.Controls.Add(this.WeightLabel, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.KgTextBox, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.radioButton1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ImperialButton, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -203,22 +203,24 @@
             this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 2;
             // 
-            // radioButton1
+            // ImperialButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(3, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(160, 43);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Imperial";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.ImperialButton.AutoSize = true;
+            this.ImperialButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImperialButton.Location = new System.Drawing.Point(3, 3);
+            this.ImperialButton.Name = "ImperialButton";
+            this.ImperialButton.Size = new System.Drawing.Size(160, 43);
+            this.ImperialButton.TabIndex = 8;
+            this.ImperialButton.TabStop = true;
+            this.ImperialButton.Text = "Imperial";
+            this.ImperialButton.UseVisualStyleBackColor = true;
+            this.ImperialButton.Click += new System.EventHandler(this.ImperialButton_Click);
             // 
             // Metric
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(302, 433);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -255,6 +257,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox ResultTextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton ImperialButton;
     }
 }

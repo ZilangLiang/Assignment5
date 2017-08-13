@@ -93,6 +93,7 @@
             this.MetricButton.TabStop = true;
             this.MetricButton.Text = "Metric";
             this.MetricButton.UseVisualStyleBackColor = true;
+            this.MetricButton.Click += new System.EventHandler(this.MetricButton_Click);
             // 
             // HeightLabel
             // 

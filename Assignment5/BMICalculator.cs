@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /// <summary>
 /// Date:August 13, 2017
-/// Description: Finish the calculate for Imperial calculator, and add CalculatorButton method to the calculator.
-/// version 0.1 - Added method to BMI calculator
+/// Description: This is the Imperial Calculator
+/// version 0.2 - Added new method to switch another form
 /// </summary>
 namespace Assignment5
 {
@@ -66,6 +66,12 @@ namespace Assignment5
         private void BMICalculator_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void MetricButton_Click(object sender, EventArgs e)
+        {
+            new Metric().Show();
+            this.Hide();
         }
     }
 }
