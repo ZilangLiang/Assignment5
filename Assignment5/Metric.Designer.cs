@@ -32,16 +32,16 @@
             this.ImperialButton = new System.Windows.Forms.RadioButton();
             this.MetricButton = new System.Windows.Forms.RadioButton();
             this.HeightLabel = new System.Windows.Forms.Label();
-            this.InchesTextBox = new System.Windows.Forms.TextBox();
+            this.CmTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.WeightLabel = new System.Windows.Forms.Label();
-            this.PoundsTextBox = new System.Windows.Forms.TextBox();
+            this.KgTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.InputLabel = new System.Windows.Forms.Label();
-            this.ShowBMI = new System.Windows.Forms.TextBox();
+            this.ResultTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -55,10 +55,10 @@
             this.tableLayoutPanel1.Controls.Add(this.ImperialButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.MetricButton, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.HeightLabel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.InchesTextBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.CmTextBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.WeightLabel, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.PoundsTextBox, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.KgTextBox, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -103,16 +103,16 @@
             this.HeightLabel.TabIndex = 2;
             this.HeightLabel.Text = "My Height:";
             // 
-            // InchesTextBox
+            // CmTextBox
             // 
-            this.InchesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InchesTextBox.ForeColor = System.Drawing.Color.Silver;
-            this.InchesTextBox.Location = new System.Drawing.Point(195, 66);
-            this.InchesTextBox.Multiline = true;
-            this.InchesTextBox.Name = "InchesTextBox";
-            this.InchesTextBox.Size = new System.Drawing.Size(100, 25);
-            this.InchesTextBox.TabIndex = 3;
-            this.InchesTextBox.Tag = "";
+            this.CmTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmTextBox.ForeColor = System.Drawing.Color.Silver;
+            this.CmTextBox.Location = new System.Drawing.Point(195, 66);
+            this.CmTextBox.Multiline = true;
+            this.CmTextBox.Name = "CmTextBox";
+            this.CmTextBox.Size = new System.Drawing.Size(100, 25);
+            this.CmTextBox.TabIndex = 3;
+            this.CmTextBox.Tag = "";
             // 
             // label2
             // 
@@ -133,15 +133,15 @@
             this.WeightLabel.TabIndex = 5;
             this.WeightLabel.Text = "My Weight:";
             // 
-            // PoundsTextBox
+            // KgTextBox
             // 
-            this.PoundsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoundsTextBox.ForeColor = System.Drawing.Color.Silver;
-            this.PoundsTextBox.Location = new System.Drawing.Point(195, 145);
-            this.PoundsTextBox.Multiline = true;
-            this.PoundsTextBox.Name = "PoundsTextBox";
-            this.PoundsTextBox.Size = new System.Drawing.Size(100, 25);
-            this.PoundsTextBox.TabIndex = 6;
+            this.KgTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KgTextBox.ForeColor = System.Drawing.Color.Silver;
+            this.KgTextBox.Location = new System.Drawing.Point(195, 145);
+            this.KgTextBox.Multiline = true;
+            this.KgTextBox.Name = "KgTextBox";
+            this.KgTextBox.Size = new System.Drawing.Size(100, 25);
+            this.KgTextBox.TabIndex = 6;
             // 
             // label1
             // 
@@ -175,15 +175,16 @@
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(91, 39);
             this.CalculateButton.TabIndex = 0;
-            this.CalculateButton.Text = "Calculate BMI";
+            this.CalculateButton.Text = "Calculate";
             this.CalculateButton.UseVisualStyleBackColor = false;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.InputLabel, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.ShowBMI, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.ResultTextBox, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(52, 330);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
@@ -192,30 +193,25 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
-            // InputLabel
+            // ResultTextBox
             // 
-            this.InputLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.InputLabel.AutoSize = true;
-            this.InputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InputLabel.Location = new System.Drawing.Point(3, 30);
-            this.InputLabel.Name = "InputLabel";
-            this.InputLabel.Size = new System.Drawing.Size(194, 20);
-            this.InputLabel.TabIndex = 0;
-            this.InputLabel.Text = "Your BMI:";
-            this.InputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ResultTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ResultTextBox.BackColor = System.Drawing.Color.White;
+            this.ResultTextBox.Enabled = false;
+            this.ResultTextBox.ForeColor = System.Drawing.Color.Silver;
+            this.ResultTextBox.Location = new System.Drawing.Point(50, 3);
+            this.ResultTextBox.Multiline = true;
+            this.ResultTextBox.Name = "ResultTextBox";
+            this.ResultTextBox.Size = new System.Drawing.Size(100, 28);
+            this.ResultTextBox.TabIndex = 1;
             // 
-            // ShowBMI
+            // label3
             // 
-            this.ShowBMI.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ShowBMI.BackColor = System.Drawing.Color.White;
-            this.ShowBMI.Enabled = false;
-            this.ShowBMI.ForeColor = System.Drawing.Color.Silver;
-            this.ShowBMI.Location = new System.Drawing.Point(50, 53);
-            this.ShowBMI.Multiline = true;
-            this.ShowBMI.Name = "ShowBMI";
-            this.ShowBMI.Size = new System.Drawing.Size(100, 28);
-            this.ShowBMI.TabIndex = 1;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 39);
+            this.label3.TabIndex = 2;
             // 
             // Metric
             // 
@@ -232,6 +228,7 @@
             this.Name = "Metric";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Metric Calculator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Metric_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -247,15 +244,15 @@
         private System.Windows.Forms.RadioButton ImperialButton;
         private System.Windows.Forms.RadioButton MetricButton;
         private System.Windows.Forms.Label HeightLabel;
-        private System.Windows.Forms.TextBox InchesTextBox;
+        private System.Windows.Forms.TextBox CmTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label WeightLabel;
-        private System.Windows.Forms.TextBox PoundsTextBox;
+        private System.Windows.Forms.TextBox KgTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label InputLabel;
-        private System.Windows.Forms.TextBox ShowBMI;
+        private System.Windows.Forms.TextBox ResultTextBox;
+        private System.Windows.Forms.Label label3;
     }
 }

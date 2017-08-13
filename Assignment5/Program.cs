@@ -9,6 +9,7 @@ namespace Assignment5
     /*
      * Name: ZiLang Liang
      * Date: August 3,2017
+     * version 0.1 - Changed to Metric in order to test Metric calculator
      * */
     static class Program
     {
@@ -25,7 +26,7 @@ namespace Assignment5
 
             bmicalculatorForm = new BMICalculator();
 
-            Application.Run(new BMICalculator());
+            Application.Run(new Metric());
         }
     }
 }

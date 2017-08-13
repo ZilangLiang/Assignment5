@@ -62,5 +62,10 @@ namespace Assignment5
                 label3.Text = "You are obese";
             }
         }
+
+        private void BMICalculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

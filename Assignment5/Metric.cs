@@ -37,5 +37,35 @@ namespace Assignment5
 
             this.Hide();
         }
+
+        private void CalculateButton_Click(object sender, EventArgs e)
+        {
+            double weight = Convert.ToDouble(CmTextBox.Text);
+            double height = Convert.ToDouble(KgTextBox.Text);
+            double BMI = (weight * 703) / (height * height);
+            ResultTextBox.Text = string.Format("{0:f}", BMI);
+
+            if (BMI < 18.5)
+            {
+                label3.Text = "You are Unerweight";
+            }
+            if ((BMI > 18.5) && (BMI < 24.9))
+            {
+                label3.Text = "You have normal weight";
+            }
+            if ((BMI > 25) && (BMI < 29.9))
+            {
+                label3.Text = "you are Overweight";
+            }
+            else
+            {
+                label3.Text = "You are obese";
+            }
+        }
+
+        private void Metric_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
