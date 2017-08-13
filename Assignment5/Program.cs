@@ -12,6 +12,8 @@ namespace Assignment5
      * */
     static class Program
     {
+        //Create Reference to FOrms
+        public static BMICalculator bmicalculatorForm;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -20,6 +22,9 @@ namespace Assignment5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            bmicalculatorForm = new BMICalculator();
+
             Application.Run(new BMICalculator());
         }
     }

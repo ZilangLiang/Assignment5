@@ -40,8 +40,8 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.InputLabel = new System.Windows.Forms.Label();
-            this.ShowBMI = new System.Windows.Forms.TextBox();
+            this.ResultTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -177,15 +177,16 @@
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(91, 43);
             this.CalculateButton.TabIndex = 0;
-            this.CalculateButton.Text = "Calculate BMI";
+            this.CalculateButton.Text = "Calculate";
             this.CalculateButton.UseVisualStyleBackColor = false;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.InputLabel, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.ShowBMI, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.ResultTextBox, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(55, 330);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
@@ -194,30 +195,28 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // InputLabel
+            // ResultTextBox
             // 
-            this.InputLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.InputLabel.AutoSize = true;
-            this.InputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InputLabel.Location = new System.Drawing.Point(3, 30);
-            this.InputLabel.Name = "InputLabel";
-            this.InputLabel.Size = new System.Drawing.Size(194, 20);
-            this.InputLabel.TabIndex = 0;
-            this.InputLabel.Text = "Your BMI:";
-            this.InputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ResultTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ResultTextBox.BackColor = System.Drawing.Color.White;
+            this.ResultTextBox.Enabled = false;
+            this.ResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultTextBox.ForeColor = System.Drawing.Color.Silver;
+            this.ResultTextBox.Location = new System.Drawing.Point(50, 3);
+            this.ResultTextBox.Multiline = true;
+            this.ResultTextBox.Name = "ResultTextBox";
+            this.ResultTextBox.Size = new System.Drawing.Size(100, 28);
+            this.ResultTextBox.TabIndex = 1;
             // 
-            // ShowBMI
+            // label3
             // 
-            this.ShowBMI.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ShowBMI.BackColor = System.Drawing.Color.White;
-            this.ShowBMI.Enabled = false;
-            this.ShowBMI.ForeColor = System.Drawing.Color.Silver;
-            this.ShowBMI.Location = new System.Drawing.Point(50, 53);
-            this.ShowBMI.Multiline = true;
-            this.ShowBMI.Name = "ShowBMI";
-            this.ShowBMI.Size = new System.Drawing.Size(100, 28);
-            this.ShowBMI.TabIndex = 1;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 20);
+            this.label3.TabIndex = 2;
             // 
             // BMICalculator
             // 
@@ -254,10 +253,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label InputLabel;
-        private System.Windows.Forms.TextBox ShowBMI;
+        private System.Windows.Forms.TextBox ResultTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

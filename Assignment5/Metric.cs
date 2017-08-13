@@ -16,9 +16,26 @@ namespace Assignment5
 {
     public partial class Metric : Form
     {
+        //PUBLIC PROPERTIES
+        public BMICalculator BMICalculator
+        {
+            get
+            {
+                return Program.bmicalculatorForm;
+            }
+        }
+
+
         public Metric()
         {
             InitializeComponent();
+        }
+
+        private void ImperialButton_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BMICalculator.Show();
+
+            this.Hide();
         }
     }
 }
