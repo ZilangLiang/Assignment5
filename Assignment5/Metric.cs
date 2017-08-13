@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 /// <summary>
-/// Date: August 12, 2017
+/// Date: August 13, 2017
 /// Description: this is the UI for Metric Calculator
-/// version 0.1 - created Metric Calculator
+/// version 0.2 - Changed Metric Calculator
 /// </summary>
 namespace Assignment5
 {

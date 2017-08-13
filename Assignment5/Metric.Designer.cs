@@ -119,9 +119,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(195, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 26);
+            this.label2.Size = new System.Drawing.Size(61, 26);
             this.label2.TabIndex = 4;
-            this.label2.Text = "(Inches)";
+            this.label2.Text = "(Cm)";
             // 
             // WeightLabel
             // 
@@ -148,9 +148,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(195, 184);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 26);
+            this.label1.Size = new System.Drawing.Size(53, 26);
             this.label1.TabIndex = 7;
-            this.label1.Text = "(Pounds)";
+            this.label1.Text = "(Kg)";
             // 
             // tableLayoutPanel2
             // 
@@ -226,7 +226,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.Margin = new System.Windows.Forms.Padding(8);
             this.MaximizeBox = false;
             this.Name = "Metric";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
