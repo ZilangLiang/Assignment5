@@ -36,12 +36,12 @@
             this.WeightLabel = new System.Windows.Forms.Label();
             this.KgTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.ImperialButton = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.ImperialButton = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -74,6 +74,7 @@
             // MetricButton
             // 
             this.MetricButton.AutoSize = true;
+            this.MetricButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MetricButton.Location = new System.Drawing.Point(195, 3);
             this.MetricButton.Name = "MetricButton";
             this.MetricButton.Size = new System.Drawing.Size(130, 43);
@@ -141,6 +142,19 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "(Kg)";
             // 
+            // ImperialButton
+            // 
+            this.ImperialButton.AutoSize = true;
+            this.ImperialButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImperialButton.Location = new System.Drawing.Point(3, 3);
+            this.ImperialButton.Name = "ImperialButton";
+            this.ImperialButton.Size = new System.Drawing.Size(152, 42);
+            this.ImperialButton.TabIndex = 8;
+            this.ImperialButton.TabStop = true;
+            this.ImperialButton.Text = "Imperial";
+            this.ImperialButton.UseVisualStyleBackColor = true;
+            this.ImperialButton.Click += new System.EventHandler(this.ImperialButton_Click);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -202,19 +216,6 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 2;
-            // 
-            // ImperialButton
-            // 
-            this.ImperialButton.AutoSize = true;
-            this.ImperialButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ImperialButton.Location = new System.Drawing.Point(3, 3);
-            this.ImperialButton.Name = "ImperialButton";
-            this.ImperialButton.Size = new System.Drawing.Size(160, 43);
-            this.ImperialButton.TabIndex = 8;
-            this.ImperialButton.TabStop = true;
-            this.ImperialButton.Text = "Imperial";
-            this.ImperialButton.UseVisualStyleBackColor = true;
-            this.ImperialButton.Click += new System.EventHandler(this.ImperialButton_Click);
             // 
             // Metric
             // 

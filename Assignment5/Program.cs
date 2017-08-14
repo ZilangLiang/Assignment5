@@ -23,7 +23,7 @@ namespace Assignment5
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Metric());
+            Application.Run(new Splash());
         }
     }
 }
