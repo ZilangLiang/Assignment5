@@ -22,6 +22,7 @@ namespace Assignment5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            bmicalculatorForm = new BMICalculator();
 
             Application.Run(new Splash());
         }

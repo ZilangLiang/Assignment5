@@ -13,13 +13,13 @@ namespace Assignment5
     /*
      * Date:August 14,2017
      * Description: This is Splash Form
-     * Version 0.1 - Created Splash Form
+     * Version 0.2 - Fixed bug
      *
      * */
     public partial class Splash : Form
     {
         // PUBLIC PROPERTIES
-        public BMICalculator CalculatorForm
+        public BMICalculator BMICalculator
         {
 
             get
@@ -35,7 +35,7 @@ namespace Assignment5
 
         private void SplashFormTimer_Tick(object sender, EventArgs e)
         {
-            this.CalculatorForm.Show();
+            this.BMICalculator.Show();
 
             this.Hide();
 

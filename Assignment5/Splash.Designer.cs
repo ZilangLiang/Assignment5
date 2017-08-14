@@ -60,6 +60,7 @@
             this.ClientSize = new System.Drawing.Size(302, 433);
             this.Controls.Add(this.label1);
             this.Name = "Splash";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Splash";
             this.ResumeLayout(false);
             this.PerformLayout();
